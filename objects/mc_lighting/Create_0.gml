@@ -1,9 +1,6 @@
 function boundary(x1,y1,x2,y2) constructor {
 	this.a = new vec2(x1,y1);
 	this.b = new vec2(x2,y2);
-	this.draw = function(){
-		draw_line(this.a.x,this.a.y,this.b.x,this.b.y);
-	}
 }
 
 function ray(x,y,dir) constructor{

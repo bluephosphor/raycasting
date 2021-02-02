@@ -2,7 +2,7 @@
   "resources": [
     {"id":{"name":"mc_game","path":"objects/mc_game/mc_game.yy",},"order":1,},
     {"id":{"name":"mc_lighting","path":"objects/mc_lighting/mc_lighting.yy",},"order":0,},
-    {"id":{"name":"FUNCTIONS","path":"scripts/FUNCTIONS/FUNCTIONS.yy",},"order":0,},
+    {"id":{"name":"INITIALIZE","path":"scripts/INITIALIZE/INITIALIZE.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
