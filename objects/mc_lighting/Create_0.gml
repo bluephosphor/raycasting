@@ -69,3 +69,5 @@ ray_count = 0;
 rays_state = CEASE;
 
 reset();
+
+light_surf = -1;

@@ -28,14 +28,14 @@ total_lines = 0;
 
 var curr_line, i = 0; repeat(line_count){
 	curr_line = lines[i];
-	array_push(lines_to_draw,[curr_line.a.x,curr_line.a.y,curr_line.b.x,curr_line.b.y]);
+	lines_to_draw[total_lines++] = [drawtype.line,curr_line.a.x,curr_line.a.y,curr_line.b.x,curr_line.b.y];
 	i++;
 }
 
 //rays states
 switch(rays_state) {
 	case INIT://///////////////////////////////////////////////////////////////////////////
-		var i = 0, d = 0; repeat(360){
+		var i = 0, d = 0; repeat(361){
 			var direction_vector = new vec2(
 				lengthdir_x(1,d),
 				lengthdir_y(1,d)
@@ -68,7 +68,7 @@ switch(rays_state) {
 				}
 				l++;
 			}
-			if (is_struct(closest)) array_push(lines_to_draw,[curr_ray.pos.x,curr_ray.pos.y,closest.x,closest.y]);
+			if (is_struct(closest)) lines_to_draw[total_lines++] = [drawtype.triangle,curr_ray.pos.x,curr_ray.pos.y,closest.x,closest.y];
 			r++;
 		}
 		
@@ -88,5 +88,3 @@ switch(rays_state) {
 }
 
 ray_count = array_length(rays);
-total_lines = array_length(lines_to_draw);
-
