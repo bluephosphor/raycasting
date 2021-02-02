@@ -50,6 +50,19 @@ function ray(x,y,dir) constructor{
 	}
 }
 
+reset = function(){
+	var i = 0 repeat(line_count){
+		delete lines[i];
+		i++;
+	}
+	lines = [];
+	line_count = 0;
+	
+	lines[line_count++] = new boundary(0,0,room_width,0);
+	lines[line_count++] = new boundary(room_width-1,0,room_width-1,room_height);
+	lines[line_count++] = new boundary(room_width,room_height-1,0,room_height-1);
+	lines[line_count++] = new boundary(0,room_height,0,0);
+}
 
 lines = [];
 line_count = 0;
@@ -57,3 +70,5 @@ linedraw_state = CEASE;
 rays = [];
 ray_count = 0;
 rays_state = CEASE;
+
+reset();

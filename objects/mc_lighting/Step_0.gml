@@ -1,6 +1,6 @@
 linedraw_init	= mouse_check_button_pressed(mb_left);
 linedraw_cease	= mouse_check_button_released(mb_left);
-delete_lines	= keyboard_check_pressed(vk_escape);
+delete_lines	= mouse_check_button_pressed(mb_right);
 
 light_init		= keyboard_check_pressed(vk_space);
 light_cease		= keyboard_check_released(vk_space);
@@ -14,20 +14,10 @@ switch (linedraw_state) {
 	case UPDATE:
         lines[line_count-1].b.x = mouse_x;
 		lines[line_count-1].b.y = mouse_y;
-		if (linedraw_cease){
-			//line_count++;
-			linedraw_state = CEASE;
-		}
+		if (linedraw_cease) linedraw_state = CEASE;
         break;
     case CEASE:
-        if (delete_lines){
-			var i = 0 repeat(line_count){
-				delete lines[i]
-				i++;
-			}
-			lines = [];
-			line_count = 0;
-		}
+        if (delete_lines)  reset();
 		if (linedraw_init) linedraw_state = INIT;
         break;
 }
@@ -36,14 +26,14 @@ switch (linedraw_state) {
 //rays states
 switch(rays_state) {
 	case INIT:
-		var i = 0, d = 0; repeat(36){
+		var i = 0, d = 0; repeat(360){
 			var direction_vector = new vec2(
 				lengthdir_x(1,d),
 				lengthdir_y(1,d)
 			);
 			rays[i] = new ray(mouse_x,mouse_y,direction_vector);
 			i ++;
-			d += 10;
+			d ++;
 		}
 		rays_state = UPDATE;
 		break;
