@@ -1,7 +1,9 @@
 line.draw();
 
-var pt = rays.cast(line);
-if (is_struct(pt)){
-	draw_circle(pt.x,pt.y,3,0);
+var i = 0; repeat(ray_count){
+	var pt = rays[i].cast(line);
+	if (is_struct(pt)){
+		draw_line(rays[i].pos.x,rays[i].pos.y,pt.x,pt.y);
+	}
+	i++;
 }
-draw_line(rays.pos.x,rays.pos.y,rays.pos.x + rays.dir.x * 10, rays.pos.y + rays.dir.y * 10 );

@@ -53,3 +53,4 @@ function ray(x,y,dir) constructor{
 state = CEASE;
 line = new boundary(30,10,50,30);
 rays = [];
+ray_count = 0;
