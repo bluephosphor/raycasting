@@ -13,8 +13,8 @@ function vec2(x,y) constructor{
 
 globalvar resolution, window_scale;
 
-resolution = {width: 84, height: 48};
-window_scale = 6;
+resolution = {width: 1280, height: 720};
+window_scale = 1;
 
 function foreach()
 /// @return N/A (0)

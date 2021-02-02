@@ -50,7 +50,10 @@ function ray(x,y,dir) constructor{
 	}
 }
 
-state = CEASE;
-line = new boundary(30,10,50,30);
+
+lines = [];
+line_count = 0;
+linedraw_state = CEASE;
 rays = [];
 ray_count = 0;
+rays_state = CEASE;
