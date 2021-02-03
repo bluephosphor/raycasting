@@ -70,4 +70,5 @@ rays_state = CEASE;
 
 reset();
 
+sub_surf = -1;
 light_surf = -1;
