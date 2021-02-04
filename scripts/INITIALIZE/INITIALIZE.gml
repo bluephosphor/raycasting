@@ -8,7 +8,9 @@
 
 enum drawtype {
 	line,
-	triangle
+	triangle,
+	set_bm,
+	sprite
 }
 
 globalvar resolution, window_scale;

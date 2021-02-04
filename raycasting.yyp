@@ -1,6 +1,5 @@
 {
   "resources": [
-    {"id":{"name":"mc_game","path":"objects/mc_game/mc_game.yy",},"order":1,},
     {"id":{"name":"mc_lighting","path":"objects/mc_lighting/mc_lighting.yy",},"order":0,},
     {"id":{"name":"INITIALIZE","path":"scripts/INITIALIZE/INITIALIZE.yy",},"order":0,},
     {"id":{"name":"spr_light","path":"sprites/spr_light/spr_light.yy",},"order":0,},

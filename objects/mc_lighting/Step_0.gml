@@ -74,7 +74,7 @@ switch(rays_state) {
 		
 		if (light_cease) {
 			var i = 0 repeat(ray_count){
-				delete rays[i]
+				delete rays[i];
 				i++;
 			}
 			rays = [];
